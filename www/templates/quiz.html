@@ -1,0 +1,13 @@
+<ion-view title="시험 보기">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <h1>{{quiz.title}}</h1>
+            <label class="item item-input" ng-repeat="question in quiz.questions">
+                <span class="input-label">{{question.engText}}</span>
+                <input type="text" placeholder="답을 적어주세요" ng-model="question.answer">
+            </label>
+            <button class="button button-block button-positive" style="margin-top:10px;"
+            ng-click="sendQuizResult()">제출</button>
+        </form>
+    </ion-content>
+</ion-view>
