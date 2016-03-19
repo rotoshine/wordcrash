@@ -3,7 +3,7 @@
         <form class="list">
             <h1>{{quiz.title}}</h1>
             <label class="item item-input" ng-repeat="question in quiz.questions">
-                <span class="input-label">{{question.engText}}</span>
+                <span class="input-label">{{question.questionText}}</span>
                 <input type="text" placeholder="답을 적어주세요" ng-model="question.answer">
             </label>
             <button class="button button-block button-positive" style="margin-top:10px;"

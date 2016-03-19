@@ -1,5 +1,19 @@
 <ion-view title="시험 결과">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-
+      <div class="card" ng-repeat="quizResult in quizResults">
+        <div class="item item-divider">
+          {{quizResult.quiz.title}}
+        </div>
+        <div class="item item-text-wrap">
+          정답률 <span class="badge badge-positive">{{quizResult.currectRating}}%</span>
+          <ion-list>
+            <ion-item ng-repeat="answer in quizResult.answers">
+              {{answer.question.questionText}} - {{answer.answerText}}
+              <span class="badge badge-positive" ng-show="answer.isCurrect">정답</span>
+              <span class="badge badge-assertive" ng-show="!answer.isCurrect">오답</span>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
     </ion-content>
 </ion-view>

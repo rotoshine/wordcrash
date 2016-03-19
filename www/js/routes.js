@@ -64,11 +64,6 @@ angular.module('app.routes', [])
     controller: 'signupCtrl'
   })
 
-  .state('page8', {
-    url: '/quiz-list',
-    templateUrl: 'templates/page8.html',
-    controller: 'page8Ctrl'
-  })
 
 $urlRouterProvider.otherwise('/login')
 

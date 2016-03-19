@@ -5,7 +5,7 @@
         <div ng-show="nowQuizLoading === false && quizList.length === 0">
           볼 수 있는 시험이 현재 없습니다.
         </div>
-        <div class="card" ng-repeat="quiz in quizList" ng-click="moveQuiz(quiz.id)">
+        <div class="card" ng-repeat="quiz in quizList" ng-click="moveQuiz(quiz._id)">
           <div class="item item-divider">{{quiz.title}}</div>
           <div class="item item-text-wrap">
             문제 갯수: {{quiz.questions.length}}
