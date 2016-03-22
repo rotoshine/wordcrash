@@ -1,4 +1,4 @@
-var serverUrl = 'http://localhost:9000';
+var serverUrl = 'http://58.229.105.37:8080';
 
 angular.module('app.controllers', [])
 
